@@ -376,8 +376,8 @@
         output.textContent = 'Please enter a number.';
         return;
       }
-
-      fetch('http://numbersapi.com/' + number + '/trivia')
+      let urltriva= 'http://numbersapi.com/' + number + '/trivia'
+      fetch(urltriva)
         .then(response => response.text())
         .then(data => {
           output.textContent = data;
